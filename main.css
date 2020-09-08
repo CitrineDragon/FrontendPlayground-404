@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono';
+}
+
+/* Colors */
+.purple { color: #6C63FF}
+
+/* Font Sizing*/
+.desk-h1 {font-size: 40px;}
+.desk-h2-p {font-size: 24px;}
+.desk-btn {font-size: 25px;}
+.mobile-h1 {font-size: 32px;}
+.mobile-h2 {font-size: 19px;}
+.mobile-p {font-size: 16px;}
+.mobile-btn {font-size: 22px;}
+
+.bold {font-weight: bold;}
+
+/* Grid Areas */
+.title {grid-area: title;}
+.image {grid-area: image;}
+.info {grid-area: info;}
+
+body {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+.container {
+  display: grid; 
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+  'image title'
+  'image info'
+  }
+}
+
+#title {
+  /* background: lightblue; */
+  width: 100%;
+  padding: 3rem;
+  grid-area: title;
+}
+
+@media only screen and (max-width: 450px) {
+  #title p {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+#image {
+  /* background: lightgreen; */
+  width: 100%;
+  padding: 3rem;
+  grid-area: image;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#info {
+  /* background: cyan; */
+  width: 100%;
+  padding: 3rem;
+  grid-area: info;
+  margin-top: -300px;
+}
+
+@media only screen and (max-height: 800px) {
+  #info {
+    margin-top: -150px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #info {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #info {
+    margin-top: 0px;
+  }
+}
+
+.p-info-1 {
+  padding-bottom: 2rem;
+}
+
+.p-info-2 {
+  padding-bottom: 6rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .p-info-1 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .p-info-2 {
+    padding-bottom: 2rem;
+    font-size: 19px;
+  }
+}
+
+form a {
+  display: block;
+  background: #6C63FF;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  line-height: 3rem;
+  text-align: center;
+  
+}
+
+@media only screen and (max-width: 450px) {
+  #info a {
+    font-size: 22px;
+  }
+}
